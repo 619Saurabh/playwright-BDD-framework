@@ -10,6 +10,6 @@ test('Handling multiple windows', async({browser}) => {
     await expect(page2).toHaveURL("https://www.toolsqa.com/selenium-training/");//Recommended -> Waits for navigation to complete, 
     // Handles redirects and Retries until test timeout
 
-    await expect(page2).toHaveTitle("Tools QA - Selenium Training");
+    await expect(page2).toHaveTitle("Tools QA - Selenium Training");//Assertion
 
 })
