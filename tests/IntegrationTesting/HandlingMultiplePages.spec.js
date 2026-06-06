@@ -20,3 +20,9 @@ test('Soft Assertion', async({page}) => {
     await expect.soft(page).toHaveTitle('Instagram');//will fail the assertion but continue the further code execution
     console.log("This line will still run even if above assertion fails")
 })
+
+test('Hard Assertion', async({page}) => {
+    await page.goto('https://www.facebook.com/');
+    await expect(page).toHaveTitle('Instagram');//will fail the assertion and stops the code execution 
+    console.log("This line will not run if above assertion fails")
+})
