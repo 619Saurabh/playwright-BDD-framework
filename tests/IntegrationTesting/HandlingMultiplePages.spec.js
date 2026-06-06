@@ -13,3 +13,10 @@ test('Handling multiple windows', async({browser}) => {
     await expect(page2).toHaveTitle("Tools QA - Selenium Training");//Assertion
 
 })
+
+
+test('Soft Assertion', async({page}) => {
+    await page.goto('https://www.facebook.com/');
+    await expect.soft(page).toHaveTitle('Instagram');//will fail the assertion but continue the further code execution
+    console.log("This line will still run even if above assertion fails")
+})
