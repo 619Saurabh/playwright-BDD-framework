@@ -1,5 +1,6 @@
 test('verify facebook title', async() => {
     await page.goto("https://www.facebook.com/");
     console.log(await page.title());
-    await expect(page).toHaveTitle("Facebook Automation Engineer 2")
+    await expect(page).toHaveTitle("Automatn Engr 1...")
+
 })
